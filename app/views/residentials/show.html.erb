@@ -1,0 +1,136 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @residential.image.url %>
+      <br>
+      <strong>DIAGNOSTICO O ACTIVIDAD / CONDICION DEL PACIENTE:</strong><br>  
+      <%= @residential.additionalfeatures %>
+      <br>
+      <br>
+      <br>
+      </div>
+
+      <br>
+  </div>
+  <div class="col-md-6">
+    <h4><strong>INFORMACION GENERAL DEL PACIENTE</strong></h4><br>
+    <strong>NOMBRES Y APELLIDOS:</strong> 
+    <h4><strong><%= @residential.construction_type %></strong></h4>
+    <div class ="col-md-12">
+     <strong>NUMERO DE INDENTIDAD DEL PACIENTE:</strong>  
+     <%= @residential.mls_number %><br>
+   </div><br>
+    <div class ="col-md-12">
+     <strong>SEXO DEL PACIENTE</strong>  
+     <%= @residential.action %><br>
+   </div>
+   <br>
+    <div class ="col-md-12">
+     <strong>FECHA DE NACIMIENTO:</strong>  
+     <%= @residential.green_certification %><br>
+  </div>
+   <div class ="col-md-12">
+    <strong>EDAD EN ANOS:</strong>  
+     <%= @residential.half_bathrooms %><br>
+  </div>
+   <div class ="col-md-12">
+    <strong>EDAD EN MESES</strong>  
+  <%= @residential.square_feet %><br>
+ </div>
+  <div class ="col-md-12">
+   <strong>EDAD EN DIAS</strong> 
+ <%= @residential.lot_size %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>PACIENTE</strong> 
+  <%= @residential.zip_code %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>PROCEDENCIA DEPARTAMENTO</strong> 
+<%= @residential.area_tennis %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>PROCEDENCIA MUNICIPIO</strong>  
+   <%= @residential.wheelchair %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>PROCEDENCIA LOCALIDAD</strong>  
+    <%= @residential.city %><br><br><br>
+ </div>
+</div>
+ <br>
+<br>
+<br>
+<div class ="col-md-6">
+  <strong>INFORMACION ADICIONAL DEL PACIENTE</strong><br>
+  <br>  
+  <div class ="col-md-12">
+   <strong>DIAGNOSTICO O ACTIVIDAD 1</strong>  
+  <%= @residential.address %>
+  <br>
+</div>
+<br>
+ <div class ="col-md-12">
+  <strong>DIAGNOSTICO O ACTIVIDAD 3</strong>  
+ <%= @residential.energy_features %><br>
+</div><br>
+ <div class ="col-md-12">
+  <strong>REFERENCIA ENVIADA A:</strong>  
+   <%= @residential.keymap %><br>
+</div><br>
+ <div class ="col-md-12">
+  <strong>REFERENCIA RECIBIDA DE:</strong>  
+   <%= @residential.elevator %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>ESTABLECIMIENTO</strong>  
+  <%= @residential.realtoremail %><br>
+</div>
+ <div class ="col-md-12">
+  <strong>PROFESIONAL DE SALUD</strong>  
+  <%= @residential.realtorname %><br>
+</div>
+ <div class ="col-md-12">
+   <strong>CODIGO</strong> 
+  <%= @residential.full_bathrooms %><br>
+</div>
+ <div class ="col-md-12">
+   <strong>NOMBRE DEL PERSONAL DE SALUD</strong>  
+  <%= @residential.realorlicense %><br> 
+</div>
+<div class ="col-md-12">
+  <strong>SERVICIO DE ATENCION:</strong>  
+  <%= @residential.property_type %><br>
+</div>
+</div>
+<br>
+<br>
+
+    <br>
+    <br>
+   <div class ="col-md-12">
+    <div class= "center">
+   <strong>VISTA PREVIA DEL MAPA DE LA LOCALIDAD DEL PACIENTE</strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @residential.area_tennis.parameterize %>">
+</iframe>
+</div>
+</div>
+<br>
+<br>
+
+
+
+</div>
+</div>
+<% if current_user == @residential.user %>
+<%= link_to 'Edit', edit_residential_path(@residential), class: "btn btn-link" %> |
+<% end %>
+<%= link_to 'Back', residentials_path, class: "btn btn-link" %><br>
+
+
