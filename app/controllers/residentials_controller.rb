@@ -136,7 +136,7 @@ class ResidentialsController < ApplicationController
           page.item(:e).value residential.property_type
           page.item(:f).value residential.property_type
           page.item(:textespe).value residential.patio_deck
-         report.page.residential(:residential).add_row do |row|
+        
           row.item(:texthc).value residential.bedrooms
           page.item(:textnombreapellido).value residential.construction_type
           page.item(:textidentidad).value residential.mls_number
@@ -154,7 +154,7 @@ class ResidentialsController < ApplicationController
           page.item(:textcondi3).value residential.energy_features
           page.item(:textenviada).value residential.keymap
           page.item(:textrecibida).value residential.elevator
-       end
+       
 
       
 
