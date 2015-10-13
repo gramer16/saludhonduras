@@ -27,7 +27,7 @@ class ResidentialsController < ApplicationController
     @residentials = Residential.all
      respond_to do |format|
       format.html # index.html.erb
-      #format.json { render json: @residentials }
+      format.json { render json: @residentials }
 
       # Example: Basic Usage
       #format.pdf {send_data render_to_string, filename: 'Ata_2005', type: 'application/pdf', disposition: 'attachment'}
@@ -118,10 +118,12 @@ class ResidentialsController < ApplicationController
     end
 
      def render_residential_list(residentials)
+
     report = ThinReports::Report.new layout: File.join(Rails.root, 'app', 'reports', 'residentials.tlf')
     
 
     report.start_new_page do |page|
+      
        @residentials.each do |residential|
 
           page.item(:textcodigo).value residential.full_bathrooms
@@ -137,7 +139,7 @@ class ResidentialsController < ApplicationController
           page.item(:f).value residential.property_type
           page.item(:textespe).value residential.patio_deck
         
-          row.item(:texthc).value residential.bedrooms
+          page.item(:texthc).value residential.bedrooms
           page.item(:textnombreapellido).value residential.construction_type
           page.item(:textidentidad).value residential.mls_number
           page.item(:textsexo).value residential.action
