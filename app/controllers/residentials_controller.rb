@@ -155,9 +155,6 @@ class ResidentialsController < ApplicationController
           page.item(:textenviada).value residential.keymap
           page.item(:textrecibida).value residential.elevator
        
-
-      
-
           page.item(:texthc1).value residential.bedrooms
           page.item(:textnombreapellido2).value residential.construction_type
           page.item(:textidentidad1).value residential.mls_number
