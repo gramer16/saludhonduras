@@ -1,29 +1,21 @@
 <h4><strong>Search Results:</strong></h4><br>
-<div class="row">
+ <div class="thumbnail">
+    <div class="center"> 
+    <div class="row">
     <% @commercialpropertiesforsales.each do |commercialpropertiesforsale| %>
     <div class="col-md-3">
     <div class="thumbnail">
       <%= link_to image_tag(commercialpropertiesforsale.image.url), commercialpropertiesforsale %>
     <div class="caption">
-      <h3><strong><%= commercialpropertiesforsale.address %></strong></h3>
-      <h4><strong><th>Price: </th> <%= number_to_currency(commercialpropertiesforsale.price) %></strong></h4>
+       <h4><strong><%= label_tag :nil, "NOMBRE DEL MEDICAMENTO" %></strong></h4>
+      <h3><strong><%= commercialpropertiesforsale.property_description %></strong></h3>
       <p>
-        <p><%= "Listed by: #{commercialpropertiesforsale.user.name}" %></p>
-        <th>Property type: </th> <%= commercialpropertiesforsale.property_type %><br>
-        <th>Property for: </th> <%= commercialpropertiesforsale.action %><br>
-        <th>City: </th> <%= commercialpropertiesforsale.city %><br>
-        <th>Zipcode: </th> <%= commercialpropertiesforsale.zipcode %><br>
-        <th>Real Estate Company: </th> <%= commercialpropertiesforsale.realestatecompany %><br>
-        <th>Office Phone: </th> <%= commercialpropertiesforsale.officephone %><br>
-        <th>Company website: </th> <%= commercialpropertiesforsale.companywebsite %><br>
-         <th>Co-Listing Agent: </th> <%= commercialpropertiesforsale.listingagent %><br>
-         <th>Co-Listing Agent: </th> <%= commercialpropertiesforsale.emailagent %><br>
-         <th>Agent Phone: </th> <%= commercialpropertiesforsale.agentphone %><br>
-          <th>Total Building Square Feet: </th> <%= commercialpropertiesforsale.totalbuildingSF %><br>
-          <th>Total Units or Suites: </th> <%= commercialpropertiesforsale.totalunits %><br>
-          <th>Floor Number: </th> <%= commercialpropertiesforsale.floorsnumber %><br>
-          <th>Property Description Details: </th> <%= commercialpropertiesforsale.property_description %><br>
-          <th>Type of Construction: </th> <%= commercialpropertiesforsale.construction_type %>
+        <p><%= t('listed_by', user: commercialpropertiesforsale.user.name) %></p>
+        <h5><strong><%= label_tag :nil, "CODIGO DEL MEDICAMENTO" %></h5></strong><h4><%= commercialpropertiesforsale.mls_number %></h4><br>
+        <h5><strong><%= label_tag :nil, "UP" %></h5></strong><h4><%= commercialpropertiesforsale.action %></h4><br>
+        <h5><strong><%= label_tag :nil, "SALDO AL INICIO DEL MES" %></h5></strong><h4><%= commercialpropertiesforsale.zipcode %></h4><br>
+        <h5><strong><%= label_tag :nil, "FECHA DE VENCIMIENTO" %></h5></strong><h4><%= commercialpropertiesforsale.construction_type %></h4><br>
+        <h5><strong><%= label_tag :nil, "CANTIDAD DE PACIENTES" %></h5></strong><h4><%= commercialpropertiesforsale.year_completed %></h4><br>
       </p>
         <td><%= link_to 'Show', commercialpropertiesforsale, class: "btn btn-warning" %></td>
         <% if (user_signed_in?) && (current_user == commercialpropertiesforsale.user) %>
