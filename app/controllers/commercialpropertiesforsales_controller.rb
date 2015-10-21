@@ -22,10 +22,10 @@ class CommercialpropertiesforsalesController < ApplicationController
 
   def index
     @commercialpropertiesforsales = Commercialpropertiesforsale.all
-    @commercialpropertiesforsales = @commercialpropertiesforsales.where(action: params["action"]) if params["action"].present?
-    @commercialpropertiesforsales = @commercialpropertiesforsales.where(property_type: params["property_type"]) if params["property_type"].present?
-    @commercialpropertiesforsales = @commercialpropertiesforsales.where(status: params["status"]) if params["status"].present?
-    @commercialpropertiesforsales = @commercialpropertiesforsales.where(construction_type: params["construction_type"]) if params["construction_type"].present?
+   # @commercialpropertiesforsales = @commercialpropertiesforsales.where(action: params["action"]) if params["action"].present?
+   # @commercialpropertiesforsales = @commercialpropertiesforsales.where(property_type: params["property_type"]) if params["property_type"].present?
+   # @commercialpropertiesforsales = @commercialpropertiesforsales.where(status: params["status"]) if params["status"].present?
+   # @commercialpropertiesforsales = @commercialpropertiesforsales.where(construction_type: params["construction_type"]) if params["construction_type"].present?
   end
 
   # GET /commercialpropertiesforsales/1
@@ -90,7 +90,7 @@ class CommercialpropertiesforsalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def commercialpropertiesforsale_params
-      params.require(:commercialpropertiesforsale).permit(:mls_number, :property_type, :action, :address, :zipcode, :city, :price, :realestatecompany, :officephone, :companywebsite, :listingagent, :emailagent, :agentphone, :assetclass, :totalbuildingSF, :totalunits, :cap_rate, :floorsnumber, :construction_type, :property_description, :parking_total, :elevators, :individual_suiteSQF, :year_completed, :lotsqft, :image)
+      params.require(:commercialpropertiesforsale).permit(:mls_number, :action, :property_description, :zipcode, :officephone, :emailagent, :agentphone, :assetclass, :construction_type, :year_completed, :lotsqft, :status, :floridarea, :image)
     end
 
     def check_user
