@@ -60,7 +60,7 @@ fr:
   searchservices: GENERAR REPORTE
   add_service: Agregar un Servicio
   servicestitle_html: <h2 style="font-family:Arial">Formularios de Informes Mensuales a Secretaria de Salud</h2>
-  listed_by: Posteado por %{user}
+  listed_by: Atendido y Posteado por %{user}
   new_residential: Crear Perfil Paciente
   new_commercial: Crear Registro de Medicamento
   squarefeet: Pies Cuadrados
@@ -88,7 +88,7 @@ fr:
   electricians_html: <h3 class="panel-title">ELECTRICISTAS</h3>
   eav_html:  <h3 class="panel-title">EAVESTROUGHING</h3>
   exterior_html: <h3 class="panel-title">DISENADOR DE EXTERIORES</h3>
-  engineer_html: <h3 class="panel-title">INGENIEROS</h3>
+  engineer_html: <h3 class="panel-title">INFORME Y SOLICITUD DE MEDICAMENTOS</h3>
   flooring_html: <h3 class="panel-title">PISOS</h3>
   framing_html: <h3 class="panel-title">ENMARCADO</h3>
   foundation_html: <h3 class="panel-title">FUNDACION (NUEVO + REPARACIONES)</h3>
@@ -114,7 +114,7 @@ fr:
   poolrepair_html: <h3 class="panel-title">REPARACION DE PISCINAS</h3>
   realtor_html: <h3 class="panel-title">AGENTES INMOBILIARIOS</h3>
   accountant_html: <h3 class="panel-title">CONTADORES</h3>
-  lawyer_html: <h3 class="panel-title">ABOGADOS</h3>
+  lawyer_html: <h3 class="panel-title">FORMULARIO DE NOTIFICACION DE ALERTA (TELEGRAMA)</h3>
   realestate_html: <h3 class="panel-title">EMPRESAS INMBOLIARIAS</h3>
   rentalpropertyfirm_html: <h3 class="panel-title">HOTELES Y RENTAS DE VACACIONES</h3>
   remodel_html: <h3 class="panel-title">ESPECIALISTAS EN REMODELACION Y RENOVACION</h3>
@@ -168,8 +168,8 @@ fr:
   securitycode: Codigo de Seguridad(CVV)
   cardexpiration: Fecha de Expiracion
   submit: Procesar
-  ourcompany_html: <h2 style="font-family:Arial"><strong>NUESTRA EMPRESA</strong></h2>
-  bodycompany_html: <h4><strong>Honduras Only</strong> es una empresa de marketing en línea que ofrece la publicidad profesional para todos los profesionales del sector inmobiliario en la republica de Honduras.<br><br><strong>Honduras Only</strong> es parte de una de las <strong>D&G Global</strong> estrategias de marketing de software que ofrecen a sus clientes a maximizar los clientes y sus negocios. <br><br><strong>D&G Global</strong> es una empresa de consultoría de desarrollo de software que ofrece servicios tecnológicos a medida como los servicios de desarrollo web para su negocio para conectar con <strong>Honduras Only</strong> para maximizar sus clientes a través de las últimas tecnologías de desarrollo web y estrategias de marketing. <br></h4>
+  ourcompany_html: <h2 style="font-family:Arial"><strong>NUESTRA ORGANIZACION Y CASOS DE EXITO EN EL CONTROL DE ENFERMEDADES</strong></h2>
+  bodycompany_html: <h4><strong>En Conjunto con la Secretaria de Salud Publica de Honduras y la Mancomunidad Chorti</strong> en la actualidad tenemos controlados todos los casos de enfermedades infecciosas en casi todos nuestros centros de salud... <br></h4>
   subbodycompany_html: <p><h4><strong>CÓMO CONTACTAR CON NOSOTROS</strong></h4>
   morecompany_html: <h4>Si desea ponerse en contacto con nosotros con cualquier pregunta o comentario, por favor envíe un correo a<strong>customers@ontariosonly.ca</strong> o llame al <strong>1-844-DNG-GLOBE</strong><br></p></h4>
   jumbotron_flooringstitle_html: <h2>Servicios de Pisos</h2>
