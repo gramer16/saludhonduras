@@ -188,7 +188,7 @@ fr:
   jumbotron_interiordesignertitle_html: <h2>Decoradores de Interiores</h2> 
   jumbotron_landscapingtitle_html: <h2>Servicios de Diseno de Jardineria</h2>
   jumbotron_landsurveyortitle_html: <h2>Servicios de Topografia</h2> 
-  jumbotron_lawyertitle_html: <h2>Servicios de Abogados</h2>
+  jumbotron_lawyertitle_html: <h2>FORMULARIOS DE NOTIFICACION DE ALERTAS TELEGRAMAS</h2>
   jumbotron_moldtitle_html: <h2>Services de Inspeccion de Moho</h2>
   jumbotron_mortgagetitle_html: <h2>Servicio de Hipotecas</h2>
   jumbotron_movingtitle_html: <h2>Servicio de Mudanzas</h2>
@@ -211,9 +211,9 @@ fr:
   jumbotron_termitetitle_html: <h2>Inspectores de Termitas</h2>
   jumbotron_titletitle_html: <h2>Empresas de Titulos</h2>
   jumbotron_windowtitle_html: <h2>Ventanas</h2>
-  jumbotron_missingservicestitle_html: <h2>Servicios de Bienes y Raices</h2>
+  jumbotron_missingservicestitle_html: <h2>INFORME Y SOLICITUD E INVENTARIO DE MEDICAMENTOS</h2>
   jumbotron_asphalttitle_html: <h2>Servicios de Asfalto</h2>
-  searchservice_html: <h4><strong>Buscar Solteros</strong></h4>
+  searchservice_html: <h4><strong>Buscar Informes</strong></h4>
   jumbotron_subscriptiontitle_html: <h2>Empresas de Bienes Raices Subscritas</h2>
   companynamesubscription_html: <strong><th class="center">Nombre de la Empresa</th></strong>
   companysitesubscription_html: <strong><th class="center">Pagina Web de la Empresa</th></strong>

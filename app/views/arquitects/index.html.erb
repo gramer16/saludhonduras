@@ -6,7 +6,7 @@
  </div>
 
 <div class="left">
-  <%= t('searchservice_html') %>
+<%= t('searchservice_html') %>
    <%= form_tag search_arquitects_path, method: :get do %>
           <p>
         <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
