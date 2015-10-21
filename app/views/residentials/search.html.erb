@@ -3,36 +3,39 @@
   <% @residentials.each do |residential| %>
   <div class="col-md-3">
     <div class="thumbnail">
-      <%= image_tag residential.image.url %>
+      <%= link_to image_tag(residential.image.url), residential %>
       <div class="caption">
-        <h3><strong><%= residential.address %></strong></h3>
-          <h4><strong><th>Price: </th> <%= number_to_currency(residential.price) %></strong></h4>
-          <p>
-            <%= residential.property_type %><br>
-            <th>Bedrooms:  </th>   <%= residential.bedrooms %><br>
-            <th>Full Bathrooms: </th>   <%= residential.full_bathrooms %><br>
-            <th>Half Bathrooms: </th>   <%= residential.half_bathrooms %><br>
-            <th>Square Feet: </th> <%= residential.square_feet %><br>
-            <th>Zip Code: </th>    <%= residential.zip_code %><br>
-             <th>Construction Type: </th> <%= residential.construction_type %><br>
-             <th>City: </th> <%= residential.city %><br>
-             <th>Florida MLS Area: </th> <%= residential.florida_mlsarea %><br>
-            <th>Private Pool: </th>    <%= residential.private_pool %><br>
-            <th>Water View: </th> <%= residential.water_view %><br>
-            <th>Golf Course: </th> <%= residential.golf_course %><br>
-            <th>Water Front: </th> <%= residential.water_front %><br>
-           
-            <th>Status: </th> <%= residential.status %><br>
+        <h4><strong><%= label_tag :nil, "NOMBRE DEL PACIENTE" %></strong></h4>
+        <h3><strong><%= residential.construction_type %></strong></h3>
+          <p>   <p><%= t('listed_by', user: residential.user.name) %></p>
+            
+          <h5><strong><%= label_tag :nil, "NUMERO DE IDENTIDAD" %></h5></strong><h4><%= residential.mls_number %></h4><br>
+          <h5><strong><%= label_tag :nil, "SEXO DEL PACIENTE" %></strong></h5>
+          <h4><%= residential.action %></h4>
+          <h5><strong><%= label_tag :nil, "EDAD DEL PACIENTE" %></strong></h5>
+          <h4><%= residential.half_bathrooms %></h4>
+          <h5><strong><%= label_tag :nil, "MUNICIPIO" %></strong></h5>
+          <h4><%= residential.wheelchair %></h4>
+          <h5><strong><%= label_tag :nil, "DEPARTAMENTO" %></strong></h5>
+          <h4><%= residential.area_tennis %></h4>
+          <h5><strong><%= label_tag :nil, "SERVICIO DE ATENCION" %></strong></h5>
+          <h4><%= residential.property_type %></h4>
+          <h5><strong><%= label_tag :nil, "REFERENCIA ENVIADA A" %></strong></h5>
+          <h4><%= residential.keymap %></h4>
+            <br>
 
           </p>
-          <%= link_to 'Show', residential, class: "btn btn-link"  %>
-          <%= link_to 'Edit', edit_residential_path(residential), class: "btn btn-link" %>
-          <%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
-
+          <%= link_to 'Show', residential, class: "btn btn-default" %>
+          <% if (user_signed_in?) && (current_user == residential.user) %>
+          <%= link_to 'Edit', edit_residential_path(residential), class: "btn btn-default" %>
+          <%= link_to 'Delete', residential, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+           <% end %>
  </div>
     </div>
   </div>
+
   <% end %>
+
 </div>
 </div>
 <br>

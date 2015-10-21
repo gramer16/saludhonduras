@@ -108,7 +108,7 @@ class ResidentialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def residential_params
-      params.require(:residential).permit(:bedrooms, :construction_type, :mls_number, :action, :green_certification, :half_bathrooms, :square_feet, :lot_size, :zip_code, :area_tennis, :wheelchair, :city, :address, :additionalfeatures, :energy_features, :keymap, :elevator, :realtoremail, :realtorname, :full_bathrooms, :realorlicense, :private_pool, :status, :property_type, :patio_deck, :image)
+      params.require(:residential).permit(:bedrooms, :construction_type, :mls_number, :action, :green_certification, :half_bathrooms, :square_feet, :lot_size, :florida_mlsarea, :area_tennis, :wheelchair, :city, :address, :additionalfeatures, :energy_features, :keymap, :elevator, :realtoremail, :realtorname, :full_bathrooms, :realorlicense, :private_pool, :status, :property_type, :patio_deck, :image)
     end
 
     def check_user
@@ -147,7 +147,7 @@ class ResidentialsController < ApplicationController
           page.item(:texta).value residential.half_bathrooms
           page.item(:textm).value residential.square_feet
           page.item(:textd).value residential.lot_size
-          page.item(:textpaci).value residential.zip_code
+          page.item(:textpaci).value residential.florida_mlsarea
           page.item(:textdeparta1).value residential.area_tennis
           page.item(:textmunicipio1).value residential.wheelchair
           page.item(:textlocalidad1).value residential.city
