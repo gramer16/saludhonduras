@@ -122,7 +122,7 @@ class ResidentialsController < ApplicationController
     report = ThinReports::Report.new layout: File.join(Rails.root, 'app', 'reports', 'residentials.tlf')
     
 
-    report.start_new_page do |page|
+report.start_new_page do |page|
       
        @residentials.each do |residential|
 
@@ -175,7 +175,7 @@ class ResidentialsController < ApplicationController
           page.item(:textenviada1).value residential.keymap
           page.item(:textrecibida1).value residential.elevator
        end
-end
+  end
 
     send_data report.generate, filename: 'Ata_2005.pdf', 
                                type: 'application/pdf', 
