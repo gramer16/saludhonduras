@@ -48,7 +48,7 @@
 
           </p>
           <%= link_to 'Show', residential, class: "btn btn-default" %>
-          <% if (user_signed_in?) && (current_user == residential.user) %>
+          <% if user_signed_in? %>
           <%= link_to 'Edit', edit_residential_path(residential), class: "btn btn-default" %>
           <%= link_to 'Delete', residential, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
            <% end %>
